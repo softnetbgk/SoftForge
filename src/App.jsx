@@ -12,7 +12,8 @@ import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/SoftForge/">
+
       <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-gray-900 text-white font-sans relative overflow-hidden">
         {/* 3D Animated Background */}
