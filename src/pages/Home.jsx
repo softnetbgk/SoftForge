@@ -46,7 +46,7 @@ export default function Home() {
                     <div className="w-full flex flex-col items-center justify-center perspective-1000 mb-12">
                         <div className="flex flex-col items-center">
                             <div className="relative flex gap-2 sm:gap-4 md:gap-6 cursor-default select-none">
-                                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl tracking-[0.25em] pl-[0.25em]">
+                                <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl tracking-[0.1em] md:tracking-[0.25em] pl-[0.1em] md:pl-[0.25em]">
                                     SOFTFORGE
                                 </h1>
                             </div>
@@ -181,14 +181,13 @@ export default function Home() {
                         </motion.div>
                     </div>
 
-                    {/* Service Highlights - Professional Cards */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
                         className="mt-20"
                     >
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                             <motion.div
                                 whileHover={{ y: -5 }}
                                 className="p-6 bg-gradient-to-br from-blue-500/10 to-blue-600/5 backdrop-blur-sm border border-blue-500/20 rounded-xl"
@@ -253,7 +252,7 @@ export default function Home() {
                     </div>
 
                     {/* Product Features Grid */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
                         <div className="text-center p-4 bg-white/5 rounded-xl border border-white/10">
                             <div className="text-3xl mb-2">📚</div>
                             <div className="text-sm font-semibold text-white">Academic Management</div>
@@ -301,7 +300,7 @@ export default function Home() {
                     <p className="text-gray-400"><span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent font-medium">Connect2Campus</span> in action</p>
                 </div>
 
-                <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto px-6">
+                <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto px-6">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}

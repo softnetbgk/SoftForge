@@ -96,7 +96,7 @@ export default function Footer() {
                         <ul className="space-y-3 text-sm text-gray-400">
                             <li className="flex items-center space-x-2">
                                 <Mail className="w-4 h-4 text-purple-400" />
-                                <span>support@softforge.com</span>
+                                <span>sofnetbgk@gmail.com</span>
                             </li>
                             <li className="flex items-center space-x-2">
                                 <Phone className="w-4 h-4 text-purple-400" />

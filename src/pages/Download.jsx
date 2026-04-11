@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { Download as DownloadIcon, Smartphone, CheckCircle, QrCode, Printer } from 'lucide-react'
+import c2cLogo from '../assets/c2c_logo_full.png'
 
 export default function Download() {
     return (
@@ -11,8 +12,8 @@ export default function Download() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-16"
                 >
-                    <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl flex items-center justify-center mb-6">
-                        <Smartphone className="w-10 h-10" />
+                    <div className="w-24 h-24 mx-auto bg-white rounded-3xl flex items-center justify-center mb-6 shadow-xl p-2">
+                        <img src={c2cLogo} alt="Connect2Campus Logo" className="w-full h-full object-contain" />
                     </div>
                     <h1 className="text-5xl md:text-6xl font-bold mb-6">
                         Download{' '}
@@ -75,7 +76,7 @@ export default function Download() {
                         </div>
 
                         <div className="text-center relative">
-                            <div className="w-64 h-64 mx-auto bg-white rounded-2xl p-4 mb-4 flex items-center justify-center relative overflow-hidden group">
+                            <div className="w-48 h-48 md:w-64 md:h-64 mx-auto bg-white rounded-2xl p-4 mb-4 flex items-center justify-center relative overflow-hidden group">
                                 <img 
                                     src={`https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent("https://play.google.com/store/apps/details?id=com.rudrappa.connect2campus&pcampaignid=web_share")}`}
                                     alt="QR Code for Play Store"

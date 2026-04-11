@@ -6,7 +6,7 @@ import c2cShowcase from '../assets/c2c_showcase_1.png'
 
 export default function PrintQR() {
     const playStoreUrl = "https://play.google.com/store/apps/details?id=com.rudrappa.connect2campus&pcampaignid=web_share";
-    
+
     // Auto-trigger print title
     useEffect(() => {
         document.title = "Print QR Code - Connect2Campus";
@@ -24,7 +24,7 @@ export default function PrintQR() {
                     <ArrowLeft className="w-5 h-5" />
                     Back to Site
                 </Link>
-                <button 
+                <button
                     onClick={handlePrint}
                     className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-blue-700 transition"
                 >
@@ -35,7 +35,7 @@ export default function PrintQR() {
 
             {/* A4 Content Area */}
             <div className="max-w-[210mm] mx-auto bg-white shadow-2xl print:shadow-none min-h-[297mm] p-[15mm] flex flex-col items-center justify-between text-center border border-gray-100 print:border-none">
-                
+
                 {/* Header */}
                 <div className="w-full flex items-center justify-center gap-6 mb-4">
                     <img src={c2cLogo} alt="C2C Logo" className="w-32 h-32 object-contain" />
@@ -53,11 +53,11 @@ export default function PrintQR() {
                     </p>
                     <div className="flex items-center justify-center gap-4">
                         <p className="text-2xl text-blue-600 font-bold italic">
-                            Available on 
+                            Available on
                         </p>
-                        <img 
-                            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
-                            alt="Google Play Logo" 
+                        <img
+                            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                            alt="Google Play Logo"
                             className="h-16 object-contain"
                         />
                     </div>
@@ -65,22 +65,30 @@ export default function PrintQR() {
 
                 {/* Main QR Code & Showcase Section */}
                 <div className="relative w-full flex items-center justify-center gap-12 py-8 px-6">
-                    {/* QR Code */}
-                    <div className="bg-white p-6 border-[8px] border-black rounded-[2rem] shadow-sm">
-                        <img 
-                            src={`https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent(playStoreUrl)}&ecc=H&margin=1`}
-                            alt="Connect2Campus Play Store QR Code"
-                            className="w-[100mm] h-[100mm] object-contain"
-                        />
-                        <p className="mt-4 text-xs font-bold text-gray-400 uppercase tracking-widest">Scan to Install</p>
+                    {/* QR Code with Logo Center */}
+                    <div className="bg-white p-6 border-[8px] border-blue-900 rounded-[2rem] shadow-sm relative">
+                        <div className="relative">
+                            <img
+                                src={`https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=${encodeURIComponent(playStoreUrl)}&ecc=H&margin=1&color=1e3a8a`}
+                                alt="Connect2Campus Play Store QR Code"
+                                className="w-[100mm] h-[100mm] object-contain"
+                            />
+                            {/* Center Logo Overlay */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="bg-white p-2 rounded-xl shadow-lg border-2 border-blue-900">
+                                    <img src={c2cLogo} alt="Inner Logo" className="w-16 h-16 object-contain" />
+                                </div>
+                            </div>
+                        </div>
+                        <p className="mt-4 text-xs font-bold text-blue-900 uppercase tracking-widest">Scan to Install</p>
                     </div>
 
                     {/* App Showcase */}
                     <div className="flex-1 max-w-[80mm]">
-                        <img 
-                            src={c2cShowcase} 
-                            alt="App Screenshot" 
-                            className="w-full rounded-3xl shadow-2xl border border-gray-200" 
+                        <img
+                            src={c2cShowcase}
+                            alt="App Screenshot"
+                            className="w-full rounded-3xl shadow-2xl border border-gray-200"
                         />
                     </div>
                 </div>
@@ -111,7 +119,8 @@ export default function PrintQR() {
 
 
             {/* Print Styles */}
-            <style dangerouslySetInnerHTML={{ __html: `
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 @media print {
                     @page {
                         size: A4;

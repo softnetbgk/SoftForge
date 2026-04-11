@@ -16,7 +16,7 @@ function App() {
     <Router>
 
       <ScrollToTop />
-      <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-gray-900 text-white font-sans relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-b from-black via-slate-900 to-gray-900 text-white font-sans relative overflow-x-hidden">
         {/* 3D Animated Background */}
         <Background3D />
 

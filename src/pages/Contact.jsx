@@ -70,8 +70,8 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-semibold mb-1">Email</h3>
-                                    <a href="mailto:support@softforge.com" className="text-gray-400 hover:text-purple-400 transition">
-                                        support@softforge.com
+                                    <a href="mailto:sofnetbgk@gmail.com" className="text-gray-400 hover:text-purple-400 transition">
+                                        sofnetbgk@gmail.com
                                     </a>
                                 </div>
                             </div>

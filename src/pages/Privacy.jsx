@@ -137,7 +137,7 @@ export default function Privacy() {
                                 If you have any questions or concerns about this Privacy Policy, please contact us:
                             </p>
                             <div className="p-6 bg-white/5 border border-white/10 rounded-xl text-gray-300">
-                                <p><strong>Email:</strong> support@softforge.com</p>
+                                <p><strong>Email:</strong> sofnetbgk@gmail.com</p>
                                 <p><strong>Phone:</strong> +91 99999 99999</p>
                                 <p><strong>Address:</strong> Sector 12, Nava Nagar, Bagalkote, Karnataka 587103, India</p>
                             </div>

@@ -25,7 +25,7 @@ export default function Navbar() {
             <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <Link to="/" className="flex items-center space-x-2">
-                    <div className="text-3xl font-bold">
+                    <div className="text-xl md:text-3xl font-bold">
                         <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
                             SoftForge Technologies
                         </span>
