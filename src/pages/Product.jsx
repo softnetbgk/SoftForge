@@ -179,7 +179,7 @@ export default function Product() {
                                 Empowering the <span className="text-blue-400">Next Generation</span> of Students
                             </h2>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Connect to Campus (C2C) isn't just a management tool; it's an ecosystem designed to bring students, parents, and educators together. By providing instant access to academic records, attendance, and real-time updates, we foster a culture of transparency and proactive learning.
+                                Connect2Campus (C2C) isn't just a management tool; it's an ecosystem designed to bring students, parents, and educators together. By providing instant access to academic records, attendance, and real-time updates, we foster a culture of transparency and proactive learning.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                                 <div className="flex items-center gap-2 text-gray-300">
@@ -260,10 +260,10 @@ export default function Product() {
                     <div className="relative z-10 grid lg:grid-cols-2 gap-16">
                         <div className="space-y-8">
                             <h2 className="text-4xl font-bold">
-                                Why Choose <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Connect to Campus (C2C)?</span>
+                                Why Choose <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Connect2Campus (C2C)?</span>
                             </h2>
                             <p className="text-lg text-gray-300">
-                                C2C is not just software; it's a commitment to educational excellence across Schools, PU Colleges, and Institutes. We've spent thousands of hours researching the challenges faced by modern institutions to build a platform that truly solves them.
+                                Connect2Campus is not just software; it's a commitment to educational excellence across Schools, PU Colleges, and Institutes. We've spent thousands of hours researching the challenges faced by modern institutions to build a platform that truly solves them.
                             </p>
                             <div className="space-y-4">
                                 <div className="p-4 bg-white/5 border border-white/10 rounded-2xl">

@@ -7,6 +7,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Download from './pages/Download'
 import Privacy from './pages/Privacy'
+import PrintQR from './pages/PrintQR'
 import Background3D from './components/Background3D'
 import ScrollToTop from './components/ScrollToTop'
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/download" element={<Download />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/print-qr" element={<PrintQR />} />
           </Routes>
         </main>
 

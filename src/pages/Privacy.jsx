@@ -52,7 +52,7 @@ export default function Privacy() {
                         <section>
                             <h2 className="text-2xl font-bold mb-4">Welcome to SoftForge Technologies Privacy Policy</h2>
                             <p className="text-gray-300">
-                                At <strong className="text-white">SoftForge Technologies</strong>, the creator of the <span className="text-purple-400 font-medium">Connect to Campus (C2C)</span> platform, we take your privacy seriously. This Privacy Policy explains how we collect,
+                                At <strong className="text-white">SoftForge Technologies</strong>, the creator of the <span className="text-purple-400 font-medium">Connect2Campus (C2C)</span> platform, we take your privacy seriously. This Privacy Policy explains how we collect,
                                 use, disclose, and safeguard your information when you use our mobile application, website, and digital services.
                             </p>
                         </section>

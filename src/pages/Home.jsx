@@ -243,7 +243,7 @@ export default function Home() {
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold mb-4">
                             <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent">
-                                Connect to Campus (C2C)
+                                Connect2Campus (C2C)
                             </span>
                         </h2>
                         <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -298,7 +298,7 @@ export default function Home() {
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                         Trusted by Schools & Students Nationwide
                     </h3>
-                    <p className="text-gray-400"><span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent font-medium">Connect to Campus</span> in action</p>
+                    <p className="text-gray-400"><span className="bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent font-medium">Connect2Campus</span> in action</p>
                 </div>
 
                 <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto px-6">
