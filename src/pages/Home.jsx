@@ -45,46 +45,16 @@ export default function Home() {
                     {/* 3D Animated Title */}
                     <div className="w-full flex flex-col items-center justify-center perspective-1000 mb-12">
                         <div className="flex flex-col items-center">
-                            <motion.div
-                                className="relative flex gap-2 sm:gap-4 md:gap-6 cursor-default select-none"
-                                initial={{ rotateX: -90, opacity: 0 }}
-                                animate={{ rotateX: 0, opacity: 1 }}
-                                transition={{ duration: 1.5, ease: "easeOut", type: "spring", bounce: 0.5 }}
-                            >
-                                {"SOFTFORGE".split("").map((char, index) => (
-                                    <motion.span
-                                        key={index}
-                                        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 transform-style-3d drop-shadow-2xl"
-                                        animate={{
-                                            y: [0, -20, 0],
-                                            rotateY: [-10, 10, -10],
-                                            scale: [1, 1.1, 1],
-                                            textShadow: [
-                                                "0px 10px 20px rgba(0,0,0,0.5)",
-                                                "0px 20px 40px rgba(0,0,0,0.3)",
-                                                "0px 10px 20px rgba(0,0,0,0.5)"
-                                            ]
-                                        }}
-                                        transition={{
-                                            duration: 4,
-                                            repeat: Infinity,
-                                            delay: index * 0.2,
-                                            ease: "easeInOut"
-                                        }}
-                                        style={{
-                                            WebkitTextStroke: "1px rgba(255,255,255,0.1)",
-                                            filter: "drop-shadow(0 0 10px rgba(168, 85, 247, 0.5))"
-                                        }}
-                                    >
-                                        {char}
-                                    </motion.span>
-                                ))}
-                            </motion.div>
+                            <div className="relative flex gap-2 sm:gap-4 md:gap-6 cursor-default select-none">
+                                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl tracking-[0.25em] pl-[0.25em]">
+                                    SOFTFORGE
+                                </h1>
+                            </div>
                             <motion.span
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 1.2 }}
-                                className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mt-2 md:mt-4 tracking-widest underline underline-offset-8 decoration-purple-500/30"
+                                className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mt-2 md:mt-4 tracking-[0.3em] uppercase underline underline-offset-8 decoration-purple-500/30"
                             >
                                 Technologies
                             </motion.span>
@@ -482,91 +452,48 @@ export default function Home() {
                                     As the architectural mind behind SoftForge Technologies, Rudrappa brings a blend of technical brilliance and strategic foresight. With deep expertise in full-stack development, he envisions software not just as code, but as a catalyst for business transformation. His commitment to scalable, clean, and efficient architecture ensures that every SoftForge Technologies solution is future-proof. He leads the development team with a philosophy rooted in continuous learning and excellence, driving the company to push the boundaries of what's possible in web and mobile technology.
                                 </p>
 
-                                {/* Animated Tech Stack */}
-                                <div className="overflow-hidden w-full mask-linear-fade mt-6">
-                                    <motion.div
-                                        className="flex gap-3 whitespace-nowrap"
-                                        animate={{ x: [0, -300] }}
-                                        transition={{
-                                            repeat: Infinity,
-                                            duration: 15,
-                                            ease: "linear"
-                                        }}
-                                    >
-                                        {[1, 2].map((_, groupIndex) => (
-                                            <div key={groupIndex} className="flex gap-3">
-                                                <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-xs font-medium text-blue-300 flex items-center gap-1">
-                                                    <Code className="w-3 h-3" /> React.js
-                                                </span>
-                                                <span className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-xs font-medium text-green-300 flex items-center gap-1">
-                                                    <Server className="w-3 h-3" /> Node.js
-                                                </span>
-                                                <span className="px-3 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-xs font-medium text-yellow-300 flex items-center gap-1">
-                                                    <Database className="w-3 h-3" /> SQL
-                                                </span>
-                                                <span className="px-3 py-1 bg-orange-500/20 border border-orange-500/30 rounded-full text-xs font-medium text-orange-300 flex items-center gap-1">
-                                                    <FileCode className="w-3 h-3" /> HTML
-                                                </span>
-                                                <span className="px-3 py-1 bg-sky-500/20 border border-sky-500/30 rounded-full text-xs font-medium text-sky-300 flex items-center gap-1">
-                                                    <Layout className="w-3 h-3" /> CSS
-                                                </span>
-                                                <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-xs font-medium text-red-300 flex items-center gap-1">
-                                                    <Coffee className="w-3 h-3" /> Java
-                                                </span>
-                                                <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-medium text-purple-300 flex items-center gap-1">
-                                                    <Cloud className="w-3 h-3" /> AWS
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </motion.div>
+                                {/* Static Tech Stack */}
+                                <div className="mask-linear-fade mt-6">
+                                    <div className="flex flex-wrap gap-3">
+                                        <span className="px-3 py-1 bg-blue-500/20 border border-blue-500/30 rounded-full text-xs font-medium text-blue-300 flex items-center gap-1">
+                                            <Code className="w-3 h-3" /> React.js
+                                        </span>
+                                        <span className="px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-xs font-medium text-green-300 flex items-center gap-1">
+                                            <Server className="w-3 h-3" /> Node.js
+                                        </span>
+                                        <span className="px-3 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded-full text-xs font-medium text-yellow-300 flex items-center gap-1">
+                                            <Database className="w-3 h-3" /> SQL
+                                        </span>
+                                        <span className="px-3 py-1 bg-orange-500/20 border border-orange-500/30 rounded-full text-xs font-medium text-orange-300 flex items-center gap-1">
+                                            <FileCode className="w-3 h-3" /> HTML
+                                        </span>
+                                        <span className="px-3 py-1 bg-sky-500/20 border border-sky-500/30 rounded-full text-xs font-medium text-sky-300 flex items-center gap-1">
+                                            <Layout className="w-3 h-3" /> CSS
+                                        </span>
+                                        <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-xs font-medium text-red-300 flex items-center gap-1">
+                                            <Coffee className="w-3 h-3" /> Java
+                                        </span>
+                                        <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-medium text-purple-300 flex items-center gap-1">
+                                            <Cloud className="w-3 h-3" /> AWS
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* Middle 3D Title */}
                         <div className="w-full flex flex-col items-center justify-center perspective-1000 py-12">
-                            <motion.div
-                                className="relative flex gap-2 sm:gap-4 md:gap-6 cursor-default select-none mb-8"
-                                initial={{ rotateX: -90, opacity: 0 }}
-                                whileInView={{ rotateX: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 1.5, ease: "easeOut", type: "spring", bounce: 0.5 }}
-                            >
-                                {"SOFTFORGE".split("").map((char, index) => (
-                                    <motion.span
-                                        key={index}
-                                        className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 transform-style-3d drop-shadow-2xl"
-                                        animate={{
-                                            y: [0, -15, 0],
-                                            rotateY: [-10, 10, -10],
-                                            scale: [1, 1.1, 1],
-                                            textShadow: [
-                                                "0px 10px 20px rgba(0,0,0,0.5)",
-                                                "0px 20px 40px rgba(0,0,0,0.3)",
-                                                "0px 10px 20px rgba(0,0,0,0.5)"
-                                            ]
-                                        }}
-                                        transition={{
-                                            duration: 4,
-                                            repeat: Infinity,
-                                            delay: index * 0.2,
-                                            ease: "easeInOut"
-                                        }}
-                                        style={{
-                                            WebkitTextStroke: "1px rgba(255,255,255,0.1)",
-                                            filter: "drop-shadow(0 0 10px rgba(168, 85, 247, 0.5))"
-                                        }}
-                                    >
-                                        {char}
-                                    </motion.span>
-                                ))}
-                            </motion.div>
+                            <div className="relative flex gap-2 sm:gap-4 md:gap-6 cursor-default select-none mb-8">
+                                <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 drop-shadow-2xl tracking-[0.25em] pl-[0.25em]">
+                                    SOFTFORGE
+                                </h2>
+                            </div>
                             <motion.span
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5 }}
-                                className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-6 tracking-widest underline underline-offset-8 decoration-purple-500/30"
+                                className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-6 tracking-[0.3em] uppercase underline underline-offset-8 decoration-purple-500/30"
                             >
                                 Technologies
                             </motion.span>
@@ -617,43 +544,31 @@ export default function Home() {
                                     Praveen is the creative and technical force that bridges the gap between complex functionality and user-centric design. Leading the technology strategy at SoftForge Technologies, he focuses on delivering high-performance applications that are intuitive and engaging. His passion lies in solving intricate problems with elegant solutions, ensuring that the end-user experience is always paramount. Praveen's leadership fosters a culture of innovation, where every challenge is viewed as an opportunity to create something extraordinary and impactful.
                                 </p>
 
-                                {/* Animated Tech Stack */}
-                                <div className="overflow-hidden w-full mask-linear-fade mt-6">
-                                    <motion.div
-                                        className="flex gap-3 whitespace-nowrap justify-start md:justify-end"
-                                        animate={{ x: [0, -300] }}
-                                        transition={{
-                                            repeat: Infinity,
-                                            duration: 15,
-                                            ease: "linear"
-                                        }}
-                                    >
-                                        {[1, 2].map((_, groupIndex) => (
-                                            <div key={groupIndex} className="flex gap-3">
-                                                <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-xs font-medium text-cyan-300 flex items-center gap-1">
-                                                    <Code className="w-3 h-3" /> React.js
-                                                </span>
-                                                <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-xs font-medium text-pink-300 flex items-center gap-1">
-                                                    <Smartphone className="w-3 h-3" /> Apps
-                                                </span>
-                                                <span className="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-xs font-medium text-indigo-300 flex items-center gap-1">
-                                                    <Database className="w-3 h-3" /> DB
-                                                </span>
-                                                <span className="px-3 py-1 bg-orange-500/20 border border-orange-500/30 rounded-full text-xs font-medium text-orange-300 flex items-center gap-1">
-                                                    <FileCode className="w-3 h-3" /> HTML
-                                                </span>
-                                                <span className="px-3 py-1 bg-sky-500/20 border border-sky-500/30 rounded-full text-xs font-medium text-sky-300 flex items-center gap-1">
-                                                    <Layout className="w-3 h-3" /> CSS
-                                                </span>
-                                                <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-xs font-medium text-red-300 flex items-center gap-1">
-                                                    <Coffee className="w-3 h-3" /> Java
-                                                </span>
-                                                <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-medium text-purple-300 flex items-center gap-1">
-                                                    <Cloud className="w-3 h-3" /> AWS
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </motion.div>
+                                {/* Static Tech Stack */}
+                                <div className="mask-linear-fade mt-6">
+                                    <div className="flex flex-wrap gap-3 justify-start md:justify-end">
+                                        <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-xs font-medium text-cyan-300 flex items-center gap-1">
+                                            <Code className="w-3 h-3" /> React.js
+                                        </span>
+                                        <span className="px-3 py-1 bg-pink-500/20 border border-pink-500/30 rounded-full text-xs font-medium text-pink-300 flex items-center gap-1">
+                                            <Smartphone className="w-3 h-3" /> Apps
+                                        </span>
+                                        <span className="px-3 py-1 bg-indigo-500/20 border border-indigo-500/30 rounded-full text-xs font-medium text-indigo-300 flex items-center gap-1">
+                                            <Database className="w-3 h-3" /> DB
+                                        </span>
+                                        <span className="px-3 py-1 bg-orange-500/20 border border-orange-500/30 rounded-full text-xs font-medium text-orange-300 flex items-center gap-1">
+                                            <FileCode className="w-3 h-3" /> HTML
+                                        </span>
+                                        <span className="px-3 py-1 bg-sky-500/20 border border-sky-500/30 rounded-full text-xs font-medium text-sky-300 flex items-center gap-1">
+                                            <Layout className="w-3 h-3" /> CSS
+                                        </span>
+                                        <span className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-xs font-medium text-red-300 flex items-center gap-1">
+                                            <Coffee className="w-3 h-3" /> Java
+                                        </span>
+                                        <span className="px-3 py-1 bg-purple-500/20 border border-purple-500/30 rounded-full text-xs font-medium text-purple-300 flex items-center gap-1">
+                                            <Cloud className="w-3 h-3" /> AWS
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
